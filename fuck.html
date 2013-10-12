@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>Fucking CSS</title>
+	<meta charset="utf-8" />
+    </head>
+    <style>
+	#penis {
+	    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;
+    left: 50%;
+    margin-left: -200px;
+    width: 200px;
+    height: 200px;
+    background: url('http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Human_penis.JPG/858px-Human_penis.JPG');
+    background-size: 200px 200px;
+    z-index: 1;
+    -moz-animation-duration: 1s;
+    -moz-animation-name: fuck;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: alternate;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-name: fuck;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-duration: 1s;
+    animation-name: fuck;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#vagina {
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;
+    left: 50%;
+    height: 200px;
+    width: 200px;
+    z-index: 0;
+
+}
+
+@-moz-keyframes fuck {
+    from {
+	margin-left: -200px;
+	width: 200px;
+    }
+    to {
+	margin-left: 0px;
+	width: 100px;
+    }
+}
+@-webkit-keyframes fuck {
+    from {
+	margin-left: -200px;
+	width: 200px;
+    }
+    to {
+	margin-left: 0px;
+	width: 100px;
+    }
+@keyframes fuck {
+    from {
+	margin-left: -200px;
+	width: 200px;
+    }
+    to {
+	margin-left: 0px;
+	width: 100px;
+    }
+
+    </style>
+    <body>
+	<div id="penis"></div>
+	<img id="vagina" src="http://upload.wikimedia.org/wikipedia/pa/9/99/Human_vagina.png" />
+    </body>
+</html>
