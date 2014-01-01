@@ -25,16 +25,27 @@
 			display: block;
 		}
 		</style>
+		<script type="text/javascript">
+		function feet() {
+			var fn = document.getElementsByClassName("fn");
+			var foots = document.getElementById("foots");
+			var cont = document.getElementById("content");
+			for (var i = 0; i < fn.length; i++) {
+				foots.innerHTML += "<p class='fn' id='fn" + (i + 1) + "'>" + (i+1) + ". " + fn[0].innerHTML + "</p>";
+				var foot = document.createElement("sup");
+				foot.innerHTML = "<a href='#fn" + (i + 1) + "'>" + (i + 1) + "</a>";
+				cont.replaceChild(foot, fn[0]);
+			}
+		}
+		</script>
 	</head>
-	<body>
+	<body onload="feet()">
 		<div id="content">
-			Lorem ipsum is just taking too long to load so I'll grab stuff from random places.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book<sup><a href="#fn1">1</a></sup>. It has survived not only five centuries, but also the leap into electronic typesetting<sup><a href="#fn2">2</a></sup>, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+			Lorem ipsum is just taking too long to load so I'll grab stuff from random places.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book<span class="fn">People like to watch cats.</span>. It has survived not only five centuries, but also the leap into electronic typesetting<span class="fn">Kittens are awesome.</span>, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 		</div>
 		<div id="foots">
 			<a href="#showall" id="showall">Show all footnotes</a><br />
 			<a href="#">Show none of the footnotes</a>
-			<p class="fn" id="fn1">1. People like to watch cats.</p>
-			<p class="fn" id="fn2">2. Kittens are AWESOME.</p>
 		</div>
 	</body>
 </html>
