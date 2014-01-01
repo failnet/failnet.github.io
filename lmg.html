@@ -27,12 +27,12 @@
 		</style>
 		<script type="text/javascript">
 		function feet() {
-			var fn = document.getElementsByClassName("WHAT I SET FOOTNOTES TO BE");
+			var fn = document.getElementsByClassName("foon");
 			var foots = document.getElementById("foots");
 			for (var i = 0; i < fn.length; i++) {
-				foots.innerHTML += "<p class='fn' id='fn" + (i + 1) + "'>" + (i+1) + ". " + fn[0].innerHTML + "</p>";
+				foots.innerHTML += "<p class='foon' id='foon" + (i + 1) + "'>" + (i+1) + ". " + fn[0].innerHTML + "</p>";
 				var foot = document.createElement("sup");
-				foot.innerHTML = "<a href='#fn" + (i + 1) + "'>" + (i + 1) + "</a>";
+				foot.innerHTML = "<a href='#foon" + (i + 1) + "'>" + (i + 1) + "</a>";
 				fn[0].parentNode.replaceChild(foot, fn[0]);
 			}
 		}
